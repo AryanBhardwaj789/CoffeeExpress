@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OrderController">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #FCF6F5;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="23.0" prefHeight="21.0" prefWidth="214.0" text="Order Here" textFill="#59131b">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.46" />
+               </effect>
+            </Label>
+            <Label layoutX="11.0" layoutY="79.0" prefHeight="20.0" prefWidth="85.0" text="Coffee Type:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="coffeeChoiceBox" layoutX="92.0" layoutY="77.0" prefHeight="25.0" prefWidth="122.0" />
+            <Button fx:id="clearFieldBtn" alignment="CENTER" layoutX="22.0" layoutY="342.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #783937;" text="Clear Fields" textFill="WHITE" />
+            <Button fx:id="orderBtn" layoutX="38.0" layoutY="294.0" mnemonicParsing="false" onAction="#order" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #783937;" text="Order" textFill="WHITE" />
+            <Label layoutX="11.0" layoutY="118.0" text="Toppings:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" alignment="CENTER" layoutX="130.0" layoutY="341.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #783937;" text="Logout" textFill="WHITE" />
+            <CheckBox fx:id="whippedCream" layoutX="35.0" layoutY="144.0" mnemonicParsing="false" text="Whipped Cream ($0.5)" />
+            <CheckBox fx:id="chocolate" layoutX="35.0" layoutY="170.0" mnemonicParsing="false" text="Chocolate ($0.5)" />
+            <CheckBox fx:id="nutella" layoutX="35.0" layoutY="195.0" mnemonicParsing="false" text="Nutella ($0.5)" />
+            <Label layoutX="13.0" layoutY="240.0" text="Quantity:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantity" layoutX="73.0" layoutY="238.0" prefHeight="25.0" prefWidth="114.0" promptText="Quantity" />
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="405.0" prefWidth="373.0" style="-fx-background-color: #783937;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="144.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/americano.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="131.0" layoutX="131.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cappucino.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="156.0" fitWidth="105.0" layoutX="272.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/glace.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="167.0" fitWidth="157.0" layoutX="-13.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/espresso.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="178.0" fitWidth="127.0" layoutX="138.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mocha.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="159.0" fitWidth="117.0" layoutX="272.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/latte.png" />
+               </image>
+            </ImageView>
+            <Line endX="252.0" fill="WHITE" layoutX="131.0" layoutY="188.0" startX="-131.0" stroke="WHITE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Line>
+            <Line endX="-22.0" endY="-198.0" fill="WHITE" layoutX="153.0" layoutY="200.0" startX="-22.0" startY="198.58578491210938" stroke="WHITE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Line>
+            <Line endX="-22.0" endY="-205.0" fill="WHITE" layoutX="288.0" layoutY="205.0" startX="-22.0" startY="198.58578491210938" stroke="WHITE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Line>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
